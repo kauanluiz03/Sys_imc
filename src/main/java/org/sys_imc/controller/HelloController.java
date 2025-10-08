@@ -16,6 +16,8 @@ public class HelloController {
     public TextField txtPeso;
     @FXML
     public Label lbIMC;
+    @FXML
+    public Label lbClassificação;
 
     Pessoa pessoa = new Pessoa();
 
@@ -25,15 +27,14 @@ public class HelloController {
 
         DecimalFormat df = new DecimalFormat();
 
-        float imc;
-        float altura;
-        float peso;
+       this.pessoa.setNome(this.txtNome.getText());
+       this.pessoa.setAltura(Float.parseFloat(this.txtAltura.getText()));
+        this.pessoa.setPeso(Float.parseFloat(this.txtPeso.getText()));
 
-        altura = Float.parseFloat(this.txtAltura.getText());
-        peso = Float.parseFloat(this.txtPeso.getText());
-        imc = peso / (altura * altura);
+
 
         df.applyPattern("#0.00");
-        this.lbIMC.setText(df.format(imc));
+        this.lbIMC.setText(df.format(this.pessoa.calcularIMC()));
+        this.lbClassificação.setText(this.pessoa.ClassificaçãoIMC());
     }
 }

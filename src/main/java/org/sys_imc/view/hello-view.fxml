@@ -108,7 +108,7 @@
                         <Font size="96.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" />
+                  <Label fx:id="lbClassificação" alignment="CENTER" />
                </children>
             </VBox>
          </children>
