@@ -1,4 +1,4 @@
-package org.sys_imc;
+package org.sys_imc.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
